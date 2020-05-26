@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itarj Search</title>
+</head>
+<body>
+    {% for row in result %}
+    <h3>{{row[2]}}</h3>
+    <p>{{row[3]}}</p>
+    <p>{{row[1]}}</p>
+    <p>{{row[4]}}</p>
+    {% endfor %}
+</body>
+</html>
