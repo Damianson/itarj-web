@@ -9,7 +9,10 @@ mycursor = mydatabase.cursor()
 
 @app.route('/')
 def index():
-    return '<h1>Hello World!</h1>'
+    posts = """SELECT * FROM JOB"""
+    mycursor.execute(posts)
+    myposts = mycursor.fetchall()
+    return render_template('index.html', posts = myposts)
 
 @app.route('/search/<keyword>')
 def search(keyword):
